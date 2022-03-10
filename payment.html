@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title> VERIFY </title>
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="img/run 1.jpg"/>
+
+    <!-- CSS
+    ================================================== -->       
+    <!-- Bootstrap css file-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font awesome css file-->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Superslide css file-->
+    <link rel="stylesheet" href="css/superslides.css">
+    <!-- Slick slider css file -->
+    <link href="css/slick.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css"> 
+    <!-- preloader -->
+    <!-- <link rel="stylesheet" href="css/queryLoader.css" type="text/css" /> -->
+    <!-- gallery slider css -->
+    <link type="text/css" media="all" rel="stylesheet" href="css/jquery.tosrus.all.css" />    
+    <!-- Default Theme css file -->
+    <link id="switcher" href="css/themes/default-theme.css" rel="stylesheet">
+    <!-- Main structure css file -->
+    <link href="style.css" rel="stylesheet">
+   
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>   
+    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>    
+
+    
+ 
+  </head>
+  <body>    
+
+    <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"></a>
+    <!-- END SCROLL TOP BUTTON -->
+
+    <!--=========== BEGIN HEADER SECTION ================-->
+    
+    <section>
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <form id="paystack-card-form">
+                            <input type="text" data-paystack="number">
+                            <input type="text" data-paystack="cvv">            
+                            <input type="text" data-paystack="expiryMonth">
+                            <input type="text"  data-paystack="expiryYear">
+                            <button type="submit" data-paystack="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+    </section>
+   
+
+ <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+ <script src="https://js.paystack.co/v1/paystack.js"></script>
+  
+ 
+ <script>
+   // Initialize paystack object
+var paystack;
+Paystack.init({
+form: "paystack-card-form", // Form ID
+access_code: 'd5gtr5gnex'   // You should programmatically pass the access
+                           // code via Ajax or a server variable. Note that
+                           // the access code can only be used once. 
+}).then(function(returnedObj){
+paystack = returnedObj;
+}).catch(function(error){
+console.log("There was an error loading Paystack", error);
+});
+</script>
+
+</body>
+</html>

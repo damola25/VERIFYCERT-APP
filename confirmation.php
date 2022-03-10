@@ -1,0 +1,1 @@
+Application successful. Thank you! KINDLY MAKE PAYMENT ON THE PAYMENT PAGE. 
